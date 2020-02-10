@@ -13,7 +13,7 @@ namespace cursonet
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
                 builder.DataSource = "(local)"; 
                 // Aquí pon tu base de datos
-                builder.InitialCatalog = "Escuela";
+                builder.InitialCatalog = "pizzeria";
                 builder.IntegratedSecurity = true;
          
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -24,7 +24,7 @@ namespace cursonet
                     connection.Open();       
                     StringBuilder sb = new StringBuilder();
                     sb.Append("SELECT *");
-                    sb.Append("FROM Curso");
+                    sb.Append("FROM pizzeria.Curso");
                     String sql = sb.ToString();
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
