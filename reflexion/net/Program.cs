@@ -25,7 +25,7 @@ namespace reflexion
             this.Nombre = nombre;
         }
     }
-
+     }
     class Repository<T> {
         public void add(T t){
             Type type = t.GetType();
